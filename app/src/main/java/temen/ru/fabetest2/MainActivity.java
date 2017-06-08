@@ -3,7 +3,6 @@ package temen.ru.fabetest2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -81,8 +80,6 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_settings) {
 //            Toast.makeText(getApplicationContext(), R.string.settings_open_unav, Toast.LENGTH_SHORT).show();
-////            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
-////            return true;
 //        }
 
         return super.onOptionsItemSelected(item);
@@ -106,7 +103,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         if (notes == null || notes.size() == 0) {
-            Toast.makeText(this, "You have no notes saved yet", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.noNotes, Toast.LENGTH_LONG).show();
         } else {
             NoteAdapter na = new NoteAdapter(this, R.layout.item_note, notes);
             mListViewNotes.setAdapter(na);
@@ -131,17 +128,15 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_bin) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_hashtags) {
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+        } else if (id == R.id.nav_auth) {
+            startActivity(new Intent(this, LoginActivity.class));
+        } else if (id == R.id.nav_sync) {
 
         }
 

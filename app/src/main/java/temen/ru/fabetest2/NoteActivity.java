@@ -19,7 +19,7 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_note2);
+        setContentView(R.layout.activity_note);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -73,7 +73,7 @@ public class NoteActivity extends AppCompatActivity {
         Note note;
 
         if(mEtTitle.getText().toString().trim().isEmpty()){
-            Toast.makeText(this, "The title is empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.emptyTitle, Toast.LENGTH_SHORT).show();
             return;
         }
         if(mLoadedNote == null) {
@@ -84,9 +84,9 @@ public class NoteActivity extends AppCompatActivity {
                     mEtContent.getText().toString());
         }
         if (Utilities.saveNote(this, note)) {
-            Toast.makeText(this, "Your note is saved!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.noteSaved, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Can not save the note. Please make sure you have enough space on your device", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.noteNotSaved, Toast.LENGTH_SHORT).show();
         }
         finish();
     }

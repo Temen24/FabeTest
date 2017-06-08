@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ТемеНоут</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
     <string name="share_unav">Поделиться сейчас невозможно</string>
 
     <string name="action_settings">Настройки</string>
     <string name="action_share">Поделиться</string>
     <string name="action_delete">Удалить</string>
-    <string name="nav_camera">Импорт</string>
-    <string name="nav_gallery">Галерея</string>
-    <string name="nav_slideshow">Слайдшоу</string>
-    <string name="nav_tools">Инструменты</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="authorization">Авторизация</string>
+    <string name="nav_login">Войти</string>
+    <string name="nav_sync">Синхронизировать</string>
+    <string name="nav_bin">Корзина</string>
+    <string name="nav_hashtag">Тэги</string>
+    <string name="noNotes">Сохраненных заметок нет</string>
+    <string name="noteSaved">Сохранено</string>
+    <string name="noteNotSaved">Невозможно сохранить заметку. Удостовертесь, что у Вас достаточно места</string>
+    <string name="emptyTitle">Заголовок пуст</string>
 </resources>
